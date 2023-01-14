@@ -1,0 +1,369 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'cairo', sans-serif;
+    overflow: hidden;
+}
+.navbar{
+    width: 100%;
+    position: fixed;
+    background-color: rgba(51, 51, 51, 0.5);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    z-index: 1;
+}
+.listManu{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.listManu a{
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    padding: .75rem;
+    transition: .2s;
+}
+.listManu a:hover{
+    border-radius: 10px;
+    background: #1cec8b;
+}
+
+.box{
+    min-height: 100vh;
+    background-image: url(../imges/pexel_2.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.itam{
+    text-align: center;
+    color: #ffffff;
+    margin-top: -25%;
+}
+.itam h1{
+    font-size: 3rem;
+    line-height: 2;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+.itam p{
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+.btn{
+    position: absolute;
+    bottom: 20%;
+    transform: translateX(-50%);
+    display: inline-block;
+    padding: 5px 5px; 
+    color: #1cec8b;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+}
+.btn:hover{
+    color: #ffffff;
+    background: #1cec8b;
+    box-shadow: 0 0 0 5px #1cec8b;
+    transition-delay: 1s;
+}
+.btn .spa{
+    position: absolute;
+    display: block;
+}
+.btn .spa:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#1cec8b);
+}
+.btn:hover .spa:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+.btn .spa:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#1cec8b);
+}
+.btn:hover .spa:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.btn .spa:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#1cec8b);
+}
+.btn:hover .spa:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25;
+}
+.btn .spa:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#1cec8b);
+}
+.btn:hover .spa:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75;
+}
+/* <----------------------------------------------------home-------------------------------------------> */
+/* <----------------------------------------------------Prices-----------------------------------------> */
+.courses{
+    position: relative;
+    min-height: 100vh;
+    background-image: url(imges/pexel.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    padding: 0 10px;
+    color: rgb(41, 20, 59);
+    background: linear-gradient(90deg,gray,#f7c5c5);
+}
+.container{
+    width: 350px;
+    height: 450px;
+    margin: 20px;
+}
+.img{
+    width: 100%;
+    height: 85%;
+}
+.text{
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px;
+    text-align: center;
+}
+.text span{    font-size: 14px;    }
+.container button{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    border: none;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+.container button:hover {    opacity: 0.7;    }
+/* <----------------------------------------------------time------------------------------------------> */
+#time{
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(45deg,#e91e63 30%,#03a9f4 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#time .title{
+    background: transparent;
+    color: white;
+    letter-spacing: 10px;
+}
+table{
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+th{
+    height: 100px;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+}
+td{
+    height: 70px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+
+.containerClock{    
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+.boxClock{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-image: url("../imges/clock.jpg");
+    background-size: cover;
+    border-radius: 50%;
+}
+.clock{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}           
+ .clock::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 10000;
+}
+.hour,.min,.sec{
+    position: absolute;
+}
+.hour, .hr{
+    width: 90px;
+    height: 90px;
+
+}
+.min, .mn{
+    width: 120px;
+    height: 120px;
+    
+}
+.sec, .sc{
+    width: 130px;
+    height: 130px; 
+}
+.hr, .mn,.sc{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+.hr::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 45px;
+    background-color: red;
+    border-radius: 6px;
+}
+.mn::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 60px;
+    background-color: white;
+    border-radius: 6px;
+}
+.sc::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+}
+
+/* <----------------------------------------------------------congratulation--------------------> */
+#certiticates{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(125deg,#2c3e50,#27ac60,#2980b9,#e74c3c,#8e44ad);
+    background-size: 400% 400%;
+    animation: ah 15s infinite;
+}
+@keyframes ah{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+#certiticates .title{
+    background: transparent;
+    color: white;
+}
+.boxs{
+    width: 80%;
+    height: 70vh;
+}
+legend{
+    margin-left: 100px;
+    font-size: 30px;
+    color: rgb(72, 235, 134);
+    font-weight: 700;
+    font-family: sans-serif;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+}
+fieldset{
+    position: relative;
+    width: 45%;
+    height: 50%;
+    margin: 30px;
+    border-color: rgb(50, 205, 76);
+    background-color: rgba(0, 0, 0, 0.342);
+    float: left;
+}
+.contant{
+    height: 95%;
+    position: relative;
+    background: #eee;
+    margin: 5px 15px;        
+}
+.textCertiticates{
+    text-align: center;
+    padding: 20px;
+    line-height: 3px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+.textCertiticates_1{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 30px;
+}
+.photo{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    width: 100px;
+}
+.photo-1{
+    position: absolute;
+    left: 30px;
+    top: 5px;
+    width: 70px;
+}

@@ -1,0 +1,214 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+ }
+ body{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../imges/banner.jpg);
+    background-size: cover;     
+    background-position: center;
+    object-fit: cover;
+    overflow: hidden;
+ }
+ .img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 5px;
+    width: 300px;
+    height: 100px;
+ }
+ form{
+    position: relative;
+    width: 25%;
+    height: 600px;
+    background: #307d7ed5;
+    border-radius: 5%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    opacity: .99993;
+ }
+ h1{
+   text-align: center;
+   color: white;
+   border: 3px solid #333;
+ }
+ form .row1{ 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+ }
+ form input{
+    display: block;
+    width: 100%;
+    height: 35px;
+    outline: none;
+    border-radius: 2px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 0 5px;
+ }
+ form .row1 input{
+    margin: 5px 0;
+    padding: 0px 5px;
+    outline: none;
+    border: none;
+ }
+ form .row2,
+ form .row3{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+ }
+ form input[type=radio]{
+    width: 15px;
+    height: 15px;
+    margin: 0px 10px;
+    cursor: pointer;
+ }
+ form label{
+    display: flex;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    justify-content: center;
+    background-color: #000;
+    text-transform: capitalize;
+ }
+ form input::placeholder{
+    font-size: 14px;
+    text-transform: capitalize;
+ }
+ form .row3 input[type=checkbox]{
+    width: 15px;
+    height: 15px;
+    margin: 0 15px;
+ }
+ form .btn{
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: white;
+    color: rgb(187, 180, 180);
+    transition: all .3s ease;
+ }
+ form .btn:hover{
+    opacity: .9;
+    color: #000;
+ }
+ /* <---------------------------------------animation of imges--------------------> */
+.anime img{
+   width: 50px;
+   animation: bubbles 8s linear infinite;
+}
+.anime {
+   width: 100%;
+   position: absolute;
+   align-items: center;
+   justify-content: space-around;
+   display: flex;
+   bottom: 0;
+ }
+ @keyframes bubbles{
+   0%{
+       transform: translatey(0);
+       opacity: 0;
+   }
+   50%{
+       opacity: 1;
+   }
+   70%{
+      opacity: 1;
+   }
+   100%{
+      transform: translatey(-80vh);
+       opacity: 0;
+    }
+ }
+ form input[type=email],
+ form input[type=password]{
+    position: relative;
+ }
+ .indicator{
+        position: absolute;
+        top: 32%;
+        right: 8%;
+        width: 10px;
+        height: 10px;
+        background-color: #555;
+        border-radius: 7px;
+ }
+ #form.valid .indicator{
+        background-color: #0f0;
+        box-shadow: 0 0 5px #0f0
+                    0 0 10px #0f0
+                    0 0 20px #0f0
+                    0 0 40px #0f0;
+ }
+ #form.invalid .indicator{
+        background-color: #f00;
+        box-shadow: 0 0 5px #f00
+                    0 0 10px #f00
+                    0 0 20px #f00
+                    0 0 40px #f00;
+ }
+ #toggle{
+        position: absolute;
+        top: 41%;
+        right: 6%;
+        z-index: 333;
+        transform: translateY(-50%);
+        width: 25px;
+        height: 25px;
+        background-image: url(../imges/eye2.jfif);
+        background-size: cover;
+        border-radius: 50%;
+        cursor: pointer;
+ }
+ #toggle.hide{
+    background-image: url(../imges/hidden-eye-cut-over-view-blindness.png);
+    background-size: cover;
+    border-radius: 20px;
+    cursor: pointer;
+ }
+
+ .anime img:nth-child(1){   animation-delay: 1.5s;   }
+ .anime img:nth-child(2){   animation-delay: 2.5s;   }
+ .anime img:nth-child(3){   animation-delay: 3.5s;   }
+ .anime img:nth-child(4){   animation-delay: 2s;   }
+ .anime img:nth-child(5){   animation-delay: 1s;   }
+ .anime img:nth-child(6){   animation-delay: 1.7s;   }
+ .anime img:nth-child(7){   animation-delay: 2.7s;   }
+
+ @media(max-width: 1670px){
+    #form h1{
+       width: 100%;
+       font-size: 18px;
+    }
+    #toggle{   
+       top: 39%;
+       right: 8%;
+    }
+    .indicator{   top: 29%;   }
+    form .row3 input[type=checkbox]{
+       width: 15px;
+       height: 15px;
+       margin: 0 5px;
+    }
+ }

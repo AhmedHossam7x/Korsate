@@ -1,0 +1,48 @@
+<html>
+   <head>
+       <title>login page in Website korsatk</title>
+       <link rel="stylesheet" href="CssFile/sign.css">
+  </head>
+  <body>
+   <img src="imges/Background (1).png" class="img">
+      <form action="home.html" method="post" id="form">
+         <h1>Student Data Registration</h1>
+         <div class="row1">   
+            <input type="text" placeholder="First Name" required >
+            <input type="text" placeholder="Last Name" required >
+         </div>
+         <input type="text" placeholder="phone" maxlength="11" required>
+         <input type="email" maxlength="23" placeholder="Email" required id="email" onkeyup="check();">
+         <span class="indicator"></span>
+         <input type="password" placeholder="Password" minlength="8" maxlength="10" id="pass" required> 
+         <div id="toggle" class="toggle" onclick="show();"></div>
+         <label>Enter Birthday</label>
+         <input type="date" required>
+         <label>Gender:</label>
+         <div class="row2">
+            <input type="radio" name="type" value="Male" checked required>Male
+            <input type="radio" name="type" value="Femlale" required>Femlale
+            <input type="radio" name="type" value="Femlale" required>Custom
+         </div>
+         <label class="choose">Choose the Country</label>
+         <div class="row3">
+            <input type="checkbox" name="Egypt" selected>Egypt
+            <input type="checkbox" name="us">us
+            <input type="checkbox" name="Russia">Russia
+            <input type="checkbox" name="Turky">Turky
+         </div>
+         <input type="submit" value="Get Started" class="btn">
+         <input type="reset" value="Reset" class="btn">
+      </form>
+      <div class="anime">
+         <img src="imges/bubbles.png">
+         <img src="imges/bubbles.png">
+         <img src="imges/bubbles.png">
+         <img src="imges/bubbles.png">
+         <img src="imges/bubbles.png">
+         <img src="imges/bubbles.png">
+         <img src="imges/bubbles.png">
+      </div>
+   </body>
+   <script src="JsFile/sign.js"></script>
+</html>

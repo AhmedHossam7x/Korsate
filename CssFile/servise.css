@@ -1,0 +1,213 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+body{    overflow: hidden;    }
+#container{
+    min-height: 100vh;
+    position: relative;
+    background-image: linear-gradient(125deg,#2c3e50,#000000,#333,#3b2826,#1c0127);
+    overflow: hidden;
+}
+.header{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    z-index: 2;
+}
+.header .und{
+    display: flex;
+    position: absolute;
+    list-style: none;
+    font-size: 20px;
+    top: 20px;
+    right: 20px;
+}
+.header .und a{
+    text-decoration: none;
+    color: white;
+    margin: 0 25px;
+    transition: .7s;
+}
+.header .und a:hover{
+    padding: .75rem;
+    background-color: crimson;
+    border-radius: 10px;
+}
+.btn{
+    display: inline-block;
+    color: white;
+    margin: 20px 20px;
+    padding: 15px 60px;
+    border-radius: 10px;
+    text-decoration: none;
+    background: crimson;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn:hover{    
+    background: white;
+    color: #000;
+}
+section{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;    
+    height: 30%;
+    animation: changecolor 5s linear infinite;
+}
+@keyframes changecolor{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.text{
+    margin: 10px;
+    text-align: center;
+    color: #00ff0a;
+    letter-spacing: 10px;
+    font-weight: 700;
+    font-size: xx-large;
+    font-family: initial;
+}
+.mag{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-image: url('../imges/Background (1).png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.unorder{
+    position: absolute;
+    display: block;
+    writing-mode: vertical-rl;
+    list-style: none;
+    color: rgb(119, 117, 117);
+    bottom: 2px;
+}
+.unorder_2{
+    float: right;
+    margin: 5px;
+    font-size: x-large;
+}
+/* <-------------------------------------------maine---------------------------------------> */
+#html, #css, #js, #php, #mysql{    
+    position: relative;
+    height: 100vh;    
+}
+#html img{
+    width: 100%;
+    height: 100%;
+}
+.card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+    height: 60%;
+    background-color:#307d7ef1;
+    transform-style: preserve-3d;
+    transform: translate(-50%,-50%) perspective(1000px);
+    box-shadow: inset 500px 0 50px rgba(0 , 0 , 0 , .5), 0 20px 100px rgba( 0 , 0 , 0 , .5);
+    transition: 1s;
+}
+.card:hover{
+    transform: translate(-50%,-50%) perspective(2000px) rotate(-10deg);
+    box-shadow: inset 100px 0 50px rgba(0 , 0 , 0 , .5), 0 20px 100px rgba( 0 , 0 , 0 , .5);
+}
+.card:before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0px;
+    width: 100%;
+    height: 5px;
+    background-color: #475b02;
+    transform-origin: bottom;
+    transform: skewX(-45deg);
+} 
+.card:after{
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: -5px;
+    width: 5px;
+    height: 100%;
+    background-color: #7EA301;
+    transform-origin: left;
+    transform: skewY(-45deg);
+}
+.card .imgbox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-origin: left;
+    transition: 1s;
+}
+.card:hover .imgbox{    transform: rotateY(-135deg);    } 
+.card .imgbox img{
+    width: 100%;
+    height: 100%;
+}
+.card .dateils{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    box-sizing: border-box;
+    padding: 20px;
+    z-index: -1;
+}
+.tekbox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    letter-spacing: 10px;
+    padding: 10px 50px;
+    background: #000;
+}
+.tek{
+    margin: 0 40%;
+    color: rgb(255, 255, 255);
+    letter-spacing: 5px;
+}
+.tek_1{
+    color: red;
+    font-size: 20px;
+    font-weight: 500;
+}
+span{    color: rgba(255 , 255, 255, .5);    } 
+/* <----------------------------------------------html------------------------------------------> */
+#css img{
+    width: 100%;
+    height: 100%;
+}
+/* <----------------------------------------------css------------------------------------------> */
+#js img{
+    width: 100%;
+    height: 100%;
+}
+/*<----------------------------------------------js------------------------------------------> */
+#php img{
+    width: 100%;
+    height: 100%; 
+}
+/*<----------------------------------------------php------------------------------------------> */
+#mysql img{
+    width: 100%;
+    height: 100%; 
+}
